@@ -34,10 +34,10 @@
 - (NSString*)media;
 - (NSUInteger)number;
 
-- (void)changeName:(NSString*)s;
-- (void)changeEmail:(NSString*)s;
-- (void)changeMedia:(NSString*)s;
-- (void)changeNumber:(NSUInteger)s;
+- (void)setName:(NSString*)s;
+- (void)setEmail:(NSString*)s;
+- (void)setMedia:(NSString*)s;
+- (void)setNumber:(NSUInteger)s;
 
 //- (void)removeEntry:(id)s;
 - (void)removeName:(NSString*)s;

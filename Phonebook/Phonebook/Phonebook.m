@@ -101,7 +101,7 @@
     NSUInteger c = [number cell];
     if (s == c)
     {
-        [number setCell:NULL];
+        [number setCell:0];
     }
 }
 
