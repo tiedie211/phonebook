@@ -17,11 +17,16 @@ int main(int argc, const char * argv[])
         
         //Create one entry and test methods
         Phonebook *entry = [[Phonebook alloc] init];
-        [entry setName:@"Tyler"];
-        [entry setEmail:@"tchristiand@gmail.com"];
-        [entry setMedia:@"Facebook"];
-        [entry setNumber:2088182575];
-        NSLog(@"\nName == %@\n", [entry name]);
+        User *myuser = [User new];
+        myuser.firstName = @"Shantu";
+        myuser.lastName = @"Roy";
+        entry.newuser = myuser;
+        //[entry setName:@"Tyler"];
+        //entry.name = @"Tyler";
+        //[entry setEmail:@"tchristiand@gmail.com"];
+        //[entry setMedia:@"Facebook"];
+        //[entry setNumber:2088182575];
+        NSLog(@"\nName == %@\n", entry.newuser.firstName);
         NSLog(@"\nEmail == %@\n", [entry email]);
         NSLog(@"\nSocialMedia == %@\n", [entry media]);
         NSLog(@"\nPhoneNumber == %lu\n", [entry number]);

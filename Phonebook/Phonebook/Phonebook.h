@@ -25,10 +25,10 @@
      SocialMedia:(NSString*)m
      PhoneNumber:(NSUInteger)p;
 
-//@property id user;
-//@property id email;
-//@property id media;
-//@property id number;
+@property (nonatomic, retain) User * newuser;
+@property (nonatomic, retain) Email * newemail;
+@property (nonatomic, retain) SocialMedia * newmedia;
+@property (nonatomic, retain) PhoneNumber * newnumber;
 - (NSString*)name;
 - (NSString*)email;
 - (NSString*)media;
@@ -44,5 +44,9 @@
 - (void)removeEmail:(NSString*)s;
 - (void)removeMedia:(NSString*)s;
 - (void)removeNumber:(NSUInteger)s;
+
+//Shantu Edits
+
+-(void)addNewEntry :(User*)newuser :(Email*)newemail :(SocialMedia *)sm :(PhoneNumber *)ph;
 
 @end

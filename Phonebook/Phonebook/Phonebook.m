@@ -10,8 +10,10 @@
 
 @implementation Phonebook
 
-//@synthesize email;
-
+@synthesize newuser;
+@synthesize newemail;
+@synthesize newmedia;
+@synthesize newnumber;
 
 //This adds an entire entry in one method
 - (void)addEntry:(NSString*)n
@@ -25,6 +27,14 @@
     [number setCell:p];
 }
 
+-(void)addNewEntry :(User*)u :(Email*)e :(SocialMedia *)sm :(PhoneNumber *)ph
+{
+    self.newuser = u;
+    self.newemail = e;
+    self.newmedia = sm;
+    self.newnumber = ph;
+    
+}
 
 
 //Get the individual parts
