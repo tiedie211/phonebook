@@ -26,7 +26,7 @@ int main(int argc, const char * argv[])
         mymedia.media = @"Facebook";
         PhoneNumber *mynumber = [PhoneNumber new];
         mynumber.cell = 2088182575;
-        
+
         entry.newuser = myuser;
         entry.newemail = myemail;
         entry.newmedia = mymedia;

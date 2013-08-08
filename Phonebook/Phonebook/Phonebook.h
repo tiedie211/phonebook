@@ -49,4 +49,6 @@
 
 -(void)addNewEntry :(User*)newuser :(Email*)newemail :(SocialMedia *)sm :(PhoneNumber *)ph;
 
+
 @end
+
