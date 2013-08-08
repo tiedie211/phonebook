@@ -10,8 +10,10 @@
 
 @implementation Phonebook
 
-//@synthesize email;
-
+@synthesize newuser;
+@synthesize newemail;
+@synthesize newmedia;
+@synthesize newnumber;
 
 //This adds an entire entry in one method
 - (void)addEntry:(NSString*)n
@@ -19,14 +21,22 @@
      SocialMedia:(NSString*)m
      PhoneNumber:(NSUInteger)p
 {
-    [user setFirstName:n];
-    [email setEmail:e];
-    [media setMedia:m];
-    [number setCell:p];
+    self.newuser.firstName = n;
+    self.newemail.email = e;
+    self.newmedia.media = m;
+    self.newnumber.cell = p;
 }
 
+-(void)addNewEntry :(User*)u :(Email*)e :(SocialMedia *)sm :(PhoneNumber *)ph
+{
+    self.newuser = u;
+    self.newemail = e;
+    self.newmedia = sm;
+    self.newnumber = ph;
+    
+}
 
-
+/*
 //Get the individual parts
 - (NSString*)name
 {
@@ -103,7 +113,7 @@
     {
         [number setCell:0];
     }
-}
+}*/
 
 
 @end
