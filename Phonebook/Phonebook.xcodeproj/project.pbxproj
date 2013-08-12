@@ -46,6 +46,7 @@
 		2F27088A179783D3001FC47D /* SocialMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMedia.m; sourceTree = "<group>"; };
 		2F27088C179783E6001FC47D /* Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Email.h; sourceTree = "<group>"; };
 		2F27088D179783E6001FC47D /* Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Email.m; sourceTree = "<group>"; };
+		2F2708ED17B981BF001FC47D /* Phonebook Main Page.graffle */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Phonebook Main Page.graffle"; path = "../../../Documents/Phonebook Main Page.graffle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 		2F27087717977730001FC47D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F2708ED17B981BF001FC47D /* Phonebook Main Page.graffle */,
 				2F27087817977730001FC47D /* Phonebook-Prefix.pch */,
 			);
 			name = "Supporting Files";
