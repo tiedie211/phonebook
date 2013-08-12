@@ -15,18 +15,8 @@
 @synthesize newmedia;
 @synthesize newnumber;
 
-//This adds an entire entry in one method
-- (void)addEntry:(NSString*)n
-           Email:(NSString*)e
-     SocialMedia:(NSString*)m
-     PhoneNumber:(NSUInteger)p
-{
-    self.newuser.firstName = n;
-    self.newemail.email = e;
-    self.newmedia.media = m;
-    self.newnumber.cell = p;
-}
 
+//This adds an entire entry in one method
 -(void)addNewEntry :(User*)u :(Email*)e :(SocialMedia *)sm :(PhoneNumber *)ph
 {
     self.newuser = u;
@@ -36,51 +26,87 @@
     
 }
 
-/*
-//Get the individual parts
-- (NSString*)name
-{
-    NSString *n = [NSString stringWithFormat:@"%@ %@",[user firstName], [user lastName]];
-    return n;
-}
-- (NSString*)email
-{
-    return [email email];
-}
-- (NSString*)media
-{
-    return [media media];
-}
-- (NSUInteger)number
-{
-    return [number cell];
-}
-
-
 
 //This part updates the individual parts
 - (void)setName:(NSString*)s
 {
     if ([s length] > 0)
     {
-        [user setFirstName:s];
+        NSArray *name = [s componentsSeparatedByString:@" "];
+        if ([name count] == 2)
+        {
+            self.newuser.firstName = [name objectAtIndex:0];
+            self.newuser.lastName = [name objectAtIndex:1];
+        }
+        else
+        {
+            self.newuser.firstName = s;
+        }
     }
 }
 - (void)setEmail:(NSString*)s
 {
-    [email setEmail:s];
+    self.newemail.email = s;
 }
 - (void)setMedia:(NSString*)s
 {
-    [media setMedia:s];
+    self.newmedia.media = s;
 }
 - (void)setNumber:(NSUInteger)s
 {
-    [number setCell:s];
+    self.newnumber.cell = s;
 }
 
 
 //Deletion of individual parts
+- (void)removeEntry
+{
+    [self removeName];
+    [self removeEmail];
+    [self removeMedia];
+    [self removeNumber];
+}
+- (void)removeName
+{
+    self.newuser.firstName = nil;
+    self.newuser.lastName = nil;
+}
+- (void)removeEmail
+{
+    self.newemail.email = nil;
+}
+- (void)removeMedia
+{
+    self.newmedia.media = nil;
+}
+- (void)removeNumber
+{
+    self.newnumber.cell = 0;
+}
+
+
+
+
+/*
+ //Get the individual parts
+ - (NSString*)name
+ {
+    NSString *n = [NSString stringWithFormat:@"%@ %@",[user firstName], [user lastName]];
+    return n;
+ }
+ - (NSString*)email
+ {
+    return [email email];
+ }
+ - (NSString*)media
+ {
+    return [media media];
+ }
+ - (NSUInteger)number
+ {
+    return [number cell];
+ }
+ 
 - (void)removeName:(NSString*)s
 {
     NSString *n = [NSString stringWithFormat:@"%@ %@",[user firstName], [user lastName]];
@@ -113,7 +139,20 @@
     {
         [number setCell:0];
     }
-}*/
+}
+ 
+ //This adds an entire entry in one method
+ - (void)addEntry:(NSString*)n
+ Email:(NSString*)e
+ SocialMedia:(NSString*)m
+ PhoneNumber:(NSUInteger)p
+ {
+ self.newuser.firstName = n;
+ self.newemail.email = e;
+ self.newmedia.media = m;
+ self.newnumber.cell = p;
+ }
+ */
 
 
 @end

@@ -19,32 +19,36 @@
     SocialMedia *media;
     PhoneNumber *number;
 }
-*/
+
 - (void)addEntry:(NSString*)n
            Email:(NSString*)e
      SocialMedia:(NSString*)m
      PhoneNumber:(NSUInteger)p;
+*/
 
 @property (nonatomic, retain) User * newuser;
 @property (nonatomic, retain) Email * newemail;
 @property (nonatomic, retain) SocialMedia * newmedia;
 @property (nonatomic, retain) PhoneNumber * newnumber;
-/*- (NSString*)name;
+
+/*
+- (NSString*)name;
 - (NSString*)email;
 - (NSString*)media;
 - (NSUInteger)number;
+*/
 
 - (void)setName:(NSString*)s;
 - (void)setEmail:(NSString*)s;
 - (void)setMedia:(NSString*)s;
 - (void)setNumber:(NSUInteger)s;
 
-//- (void)removeEntry:(id)s;
-- (void)removeName:(NSString*)s;
-- (void)removeEmail:(NSString*)s;
-- (void)removeMedia:(NSString*)s;
-- (void)removeNumber:(NSUInteger)s;
-*/
+- (void)removeEntry;
+- (void)removeName;
+- (void)removeEmail;
+- (void)removeMedia;
+- (void)removeNumber;
+
 //Shantu Edits
 
 -(void)addNewEntry :(User*)newuser :(Email*)newemail :(SocialMedia *)sm :(PhoneNumber *)ph;

@@ -17,4 +17,6 @@
 @property NSString* firstName;
 @property NSString* lastName;
 
+- (NSString *)fullName;
+
 @end

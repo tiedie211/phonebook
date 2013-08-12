@@ -13,4 +13,9 @@
 @synthesize firstName;
 @synthesize lastName;
 
+- (NSString *)fullName
+{
+    NSString *name = [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
+    return name;
+}
 @end
